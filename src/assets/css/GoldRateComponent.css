@@ -1,0 +1,94 @@
+/* General Styles */
+.gold-rate-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .gold-rate-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f59e0b; /* Gold color */
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .gold-price {
+    font-size: 32px;
+    color: #fbbf24; /* A slightly brighter yellow */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .alert-settings {
+    margin-top: 20px;
+  }
+  
+  .alert-settings label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  
+  .threshold-input {
+    border: 2px solid #d1d5db;
+    padding: 8px 12px;
+    margin: 0 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 120px;
+  }
+  
+  .alert-checkbox {
+    margin-right: 10px;
+  }
+  
+  .alert-settings input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+  
+  .alert-settings input[type="number"] {
+    width: 100px;
+  }
+  
+  /* Additional Animation for Alert */
+  @keyframes alertPopup {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  
+  .popup-alert {
+    animation: alertPopup 1s ease-out forwards;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ef4444; /* Red alert */
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+  }
+  
+  .popup-alert p {
+    margin: 0;
+  }
+  

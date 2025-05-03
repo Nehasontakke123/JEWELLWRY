@@ -1,0 +1,153 @@
+/* Global box-sizing fix to prevent overflow */
+* {
+  box-sizing: border-box;
+}
+
+/* Background full screen */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  /* background: linear-gradient(135deg, #f7f1f1, #e5d3d3); */
+  cursor: pointer;
+}
+
+/* Form card box */
+.form-section {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Tabs (LOGIN | REGISTER) */
+.form-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  margin: 0 6px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #8e4457;
+  color: #fff;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.tab-button.active {
+  background: #6c2f42;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  background: #fafafa;
+  transition: border 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #8e4457;
+  background: #fff;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: #8e4457;
+  color: white;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #6c2f42;
+}
+
+/* Success & Error messages */
+.success-msg,
+.error-msg {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.success-msg {
+  color: green;
+}
+
+.error-msg {
+  color: red;
+}
+
+/* Password wrapper to position eye icon */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  display: block;
+  padding-right: 45px;
+  box-sizing: border-box; /* Ensures the padding doesn't overflow */
+}
+
+/* Eye icon styling */
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #8e4457;
+  transition: color 0.3s ease;
+}
+
+.eye-icon:hover {
+  color: #6c2f42;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .form-section {
+    padding: 30px 20px;
+  }
+
+  .tab-button {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 15px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

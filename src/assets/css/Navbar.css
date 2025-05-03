@@ -1,0 +1,259 @@
+/* ✅ Smooth Moving Wave Effect */
+@keyframes waveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✅ General Navbar Styles */
+.navbar {
+  background: linear-gradient(270deg, #ffb6b9, #fae3d9, #ffcad4, #fbe3e8);
+  background-size: 400% 400%;
+  animation: waveGradient 6s ease infinite;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+
+
+/* ✅ Top Navigation Bar */
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.nav-logo a {
+  font-size: 49px;
+  font-weight: 800;
+  color: #8e4457;
+  text-decoration: none;
+}
+
+/* ✅ Search Bar */
+/* .nav-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #c08497;
+  border-radius: 20px;
+  padding: 5px 15px;
+  width: 50%;
+  font-size: 30px;
+  background: linear-gradient(270deg, #fff, #f9e1e1, #ffdde1);
+  background-size: 200% 200%;
+  animation: waveGradient 6s ease infinite;
+}
+
+.nav-search input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 21px;
+  color: #b56576;
+  background: transparent;
+} */
+
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #c08497;
+  border-radius: 20px;
+  padding: 8px 8px; /* ✂️ padding अजून कमी केली */
+  width: 50%;
+  font-size: 21px; /* ✂️ font-size अजून कमी */
+  /* background: linear-gradient(270deg, #fff, #f9e1e1, #ffdde1); */
+  background-size: 200% 200%;
+  animation: waveGradient 6s ease infinite;
+  height: 35px; /* ✅ fixed height देली */
+}
+
+.nav-search input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 21px; /* ✂️ input font-size अजून कमी */
+  margin-top: 20px;
+  color: #b56576;
+  background: transparent;
+  height: 100%; /* ✅ full height input ला */
+}
+
+
+
+
+.search-icon, .mic-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #c08497;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-icon:hover, .mic-icon:hover {
+  color: #b56576;
+}
+
+/* ✅ Icons */
+.nav-icons {
+  display: flex;
+  gap: 20px;
+  color: #8e4457;
+  font-size: 25px;
+}
+
+.nav-icons svg:hover {
+  color: #8e4457;
+  transform: scale(1.2);
+}
+
+/* ✅ Bottom Navigation Links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 0;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #8e4457;
+  padding: 5px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #b56576;
+  background: linear-gradient(to right, #fff5f7, #b56576);
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+/* ✅ Active Link */
+.nav-links a.active {
+  color: white;
+  background: #b56576;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+/* ✅ Mobile Menu Button */
+.nav-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  color: #b56576;
+}
+
+ /* ✅ Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-search {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .nav-icons {
+    margin-top: 10px;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.flex {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-logo a {
+    font-size: 30px;
+  }
+
+  .nav-icons svg {
+    font-size: 20px;
+  }
+
+  .cart-icon {
+    font-size: 22px;
+  }
+}
+.loginform a{
+  color: #8e4457;
+}
+
+.loginform a.active {
+  color:#8e4457;  
+} 
+
+
+
+
+
+.cart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-link {
+  color: #8e4457;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cart-link:hover {
+  color: #6e3244; /* Darker shade on hover */
+}
+
+.cart-icon {
+  font-size: 24px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #8e4457;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 2px 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+}

@@ -1,0 +1,75 @@
+/* Brides Of India - Main Container */
+.brides-india-container {
+  text-align: center;
+  margin-top: 100px;
+  overflow-x: hidden;
+  padding: 0 20px;
+}
+
+/* Brides List Grid */
+.brides-india-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Bride Card */
+.brides-india-card {
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.brides-india-card:hover {
+  transform: scale(1.03);
+}
+
+/* Bride Image - Fix applied */
+.brides-india-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Bride Name */
+.brides-india-name {
+  margin-top: 12px;
+  font-size: 1.3rem;
+  color: #8e4457;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* ================= Responsive ================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .brides-india-name {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .brides-india-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .brides-india-card {
+    padding: 8px;
+  }
+
+  .brides-india-img {
+    height: auto;
+  }
+
+  .brides-india-name {
+    font-size: 1rem;
+  }
+}

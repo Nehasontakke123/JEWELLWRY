@@ -1,0 +1,86 @@
+   /* Wrapper for full page center */
+.notifications-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f5f9;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Container box */
+.notifications-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Heading */
+.notifications-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.notifications-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Input and Textarea */
+.notifications-input,
+.notifications-textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border 0.3s;
+  width: 100%;
+}
+
+.notifications-input:focus,
+.notifications-textarea:focus {
+  border-color:#8e4457;
+  outline: none;
+}
+
+/* Button styling */
+.notifications-button {
+  background:#8e4457;
+  color: #fff;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.notifications-button:hover {
+  background: linear-gradient(to right, #8e4457, #b56576);
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .notifications-container {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .notifications-title {
+    font-size: 1.5rem;
+  }
+
+  .notifications-button {
+    padding: 10px;
+  }
+}

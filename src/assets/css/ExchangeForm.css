@@ -1,0 +1,118 @@
+/* Container to center form on screen */
+.exchange-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height of the screen */
+    background: #f3f4f6; /* Light background */
+    padding: 20px;
+  }
+  
+  /* Form card styles */
+  .exchange-form-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styling */
+  .form-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form fields */
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-input,
+  .form-textarea,
+  .form-select,
+  .otp-input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus,
+  .form-select:focus,
+  .otp-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .form-textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    background-color: #b56576;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(to right, #8e4457, #b56576);
+  }
+  
+  /* OTP section */
+  .otp-section {
+    margin-top: 25px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .otp-input {
+    flex: 1;
+  }
+  
+  .verify-btn {
+    background-color:#8e4457;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .verify-btn:hover {
+    background: linear-gradient(to right, #8e4457, #8e4457);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .exchange-form-container {
+      padding: 20px;
+    }
+  
+    .otp-section {
+      flex-direction: column;
+    }
+  
+    .verify-btn {
+      width: 100%;
+    }
+  }
+  

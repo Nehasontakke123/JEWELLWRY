@@ -1,0 +1,176 @@
+/* Wrapper for centering */
+.repair-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertically center */
+  padding: 30px 20px;
+  background-color: #fdfdfd;
+  min-height: 100vh; /* full screen height */
+}
+
+
+/* Main container holding info + form side by side */
+.repair-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Heading */
+.repair-heading {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Left-side info box */
+.repair-info {
+  flex: 1;
+  min-width: 280px;
+  background-color: #fdf4f1;
+  padding: 20px;
+  border: 1px solid #f0cfc5;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+.repair-info ul {
+  padding-left: 20px;
+}
+
+.repair-info li {
+  margin-bottom: 10px;
+}
+
+/* Form on right */
+.repair-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.repair-form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.repair-label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.repair-input,
+.repair-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.repair-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.repair-btn {
+  background: linear-gradient(45deg, #b56576, #8e4457);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.repair-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 182, 185, 0.4);
+  background: linear-gradient(45deg, #8e4457, #b56576);
+}
+
+/* OTP Styles */
+.otp-container {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #8e4457;
+  border-radius: 8px;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.otp-input:focus {
+  border-color: #8e4457;
+  box-shadow: 0 0 10px rgba(255, 182, 185, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .repair-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .repair-heading {
+    font-size: 24px;
+  }
+
+  .repair-input,
+  .repair-textarea,
+  .repair-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .repair-info,
+  .repair-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .repair-container {
+    padding: 15px;
+  }
+
+  .repair-heading {
+    font-size: 20px;
+  }
+
+  .repair-label {
+    font-size: 14px;
+  }
+
+  .repair-input,
+  .repair-textarea,
+  .repair-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

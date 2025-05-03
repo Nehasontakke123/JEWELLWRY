@@ -1,0 +1,98 @@
+/* @keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.falling-flower {
+    position: fixed;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background-image: url("../images/genda.jpg"); 
+    background-size: cover;
+    animation: fall linear infinite;
+}
+
+.falling-leaf {
+    position: fixed;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/transparent.jpg"); 
+    background-size: cover;
+    animation: fall linear infinite;
+} */
+
+
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Common Styles for Falling Elements */
+.falling-flower, .falling-leaf {
+    position: fixed;
+    top: 0;
+    background-size: cover;
+    animation: fall linear infinite;
+}
+
+/* Default Size (for Desktop) */
+.falling-flower {
+    width: 35px;
+    height: 35px;
+    background-image: url("../images/genda.jpg"); 
+    animation-duration: 5s; /* Adjust speed */
+}
+
+.falling-leaf {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/Leaves.jpg"); 
+    animation-duration: 6s; /* Adjust speed */
+}
+
+/* 🌟 Responsive Adjustments */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .falling-flower {
+        width: 25px;
+        height: 25px;
+        animation-duration: 4.5s;
+    }
+
+    .falling-leaf {
+        width: 22px;
+        height: 22px;
+        animation-duration: 5.5s;
+    }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    .falling-flower {
+        width: 20px;
+        height: 20px;
+        animation-duration: 4s;
+    }
+
+    .falling-leaf {
+        width: 18px;
+        height: 18px;
+        animation-duration: 4.5s;
+    }
+}

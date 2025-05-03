@@ -1,0 +1,234 @@
+.diamond-jewellery-container {
+  padding: 40px;
+  text-align: center;
+  /* background: linear-gradient(135deg, #8e4457, #f9e0e6); Elegant plum-pink gradient */
+  border-radius: 20px;
+}
+
+.heading {
+  font-size: 40px;
+  font-weight: 800;
+  color: #8e4457;
+  margin-bottom: -5px;
+  font-family: 'Georgia', serif;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.heading ::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #8e4457;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.description {
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style:normal;
+  color: black;
+}
+
+
+
+
+
+
+/* .heading {
+  font-size: 40px;
+  font-weight: 800;
+  color: #8e4457;
+  margin-bottom: 10px;
+  font-family: 'Georgia', serif;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  width: 50%;  
+  height: 3px; 
+  background: #8e4457;
+  bottom: -5px;  
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+} */
+
+
+/* .jewellery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+} */
+
+.jewellery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 20px; /* padding added to avoid overflow */
+  box-sizing: border-box;
+}
+
+
+.jewellery-card {
+  background: #fff;
+  padding: 25px;
+  margin-left: 55px;
+  border-radius: 30px;
+  width: 300px;
+  height: 360px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform-origin: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jewellery-card:hover {
+  transform: translateY(-10px) rotate(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #8e4457, #d07c95); 
+}
+
+.circle-image-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  border: 5px solid #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jewellery-card:hover .circle-image-wrapper {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.jewellery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.jewellery-card:hover .jewellery-image {
+  transform: scale(1.1);
+}
+
+.label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #8e4457;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.jewellery-card:hover .label {
+  color: #fff;
+}
+
+/* Medium Devices */
+@media (max-width: 768px) {
+  .jewellery-card {
+    width: 240px;
+    height: 360px;
+  }
+
+  .circle-image-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Devices */
+/* @media (max-width: 480px) {
+  .jewellery-grid {
+    gap: 20px;
+  }
+
+  .jewellery-card {
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+  }
+
+  .circle-image-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+} */
+
+
+
+
+@media (max-width: 480px) {
+  .jewellery-grid {
+    gap: 20px;
+    padding: 0 10px; /* reduce padding on small devices */
+  }
+
+  .jewellery-card {
+    width: 100%;
+    max-width: 300px; /* limit max width */
+    margin: 0 auto;   /* center the card */
+    height: 350px;
+    padding: 20px;
+  }
+
+  .circle-image-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+}

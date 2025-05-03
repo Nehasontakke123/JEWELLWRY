@@ -1,0 +1,218 @@
+/* ============ BASE STYLES ============ */
+.brides-section {
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: #fff;
+}
+
+.brides-heading h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #8e4457;
+  margin-bottom: 5px;
+  font-family: 'Georgia', serif;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+
+.brides-heading h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #8e4457;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  
+}
+
+.brides-heading p {
+  /* font-size: 1.3rem;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 30px; */
+  font-size: 1.4rem;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style:normal;
+  color: black;
+}
+
+.banner {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  transition: transform 0.4s ease-in-out;
+}
+
+.banner:hover {
+  transform: scale(1.02);
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;
+  max-height: 850px;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.brides-list {
+  margin-top: -280px;
+  padding: 20px 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.bride-card {
+  width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* background: #fff; */
+}
+
+.bride-card:hover {
+  transform: scale(1.05);
+}
+
+.bride-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bride-name {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+}
+
+.view-all-container {
+  display: none;
+}
+
+/* ============ RESPONSIVE STYLES ============ */
+
+@media screen and (max-width: 1024px) {
+  .brides-heading h2 {
+    font-size: 32px;
+  }
+
+  .banner-img {
+    max-height: 650px;
+  }
+
+  .brides-list {
+    margin-top: -180px;
+  }
+
+  .bride-card {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .brides-heading h2 {
+    font-size: 28px;
+  }
+
+  .brides-heading p {
+    font-size: 16px;
+  }
+
+  .banner-img {
+    max-height: 500px;
+  }
+
+  .brides-list {
+    margin-top: -140px;
+    gap: 16px;
+    justify-content: center;
+    padding: 0 8px;
+  }
+
+  .bride-card {
+    width: calc(50% - 10px); /* 2 in a row with gap */
+    max-width: 160px;
+    margin-bottom: 12px;
+  }
+
+  .bride-name {
+    font-size: 13px;
+  }
+}
+
+/* Mobile view: Display small images in one horizontal row */
+@media screen and (max-width: 480px) {
+  .brides-heading h2 {
+    font-size: 24px;
+  }
+
+  .brides-heading p {
+    font-size: 14px;
+  }
+
+  .banner-img {
+    max-height: 300px;
+  }
+
+  .brides-list {
+    /* Set to one horizontal row with scrolling if needed */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 10px 12px;
+    justify-content: flex-start;
+    margin-top: -80px; /* कमी करण्यासाठी */
+  }
+
+  .bride-card {
+    flex: 0 0 auto;
+    width: 100px; /* लहान कार्ड्स */
+    margin-bottom: 0;
+  }
+
+  .bride-name {
+    font-size: 12px;
+  }
+}
+
+/* Further adjustments for very small devices */
+@media screen and (max-width: 380px) {
+  .brides-list {
+    gap: 10px;
+    padding: 10px 10px;
+  }
+
+  .bride-card {
+    width: 90px;
+  }
+
+  .bride-img {
+    aspect-ratio: 3 / 4;
+    height: auto;
+  }
+}

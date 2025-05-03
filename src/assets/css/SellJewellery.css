@@ -1,0 +1,79 @@
+.sell-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Input Fields & Select Box */
+  .sell-form input,
+  .sell-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Submit Button */
+  .sell-form button {
+    background: #d4af37;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .sell-form button:hover {
+    background: #b58e2e;
+  }
+  
+  /* ✅ Responsive Design */
+  @media (max-width: 768px) {
+    .sell-form {
+      max-width: 90%;
+      margin: 30px auto;
+      padding: 15px;
+    }
+  
+    .sell-form input,
+    .sell-form select {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .sell-form button {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  
+  /* ✅ Mobile (Small Devices) */
+  @media (max-width: 480px) {
+    .sell-form {
+      max-width: 95%;
+      margin: 20px auto;
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .sell-form input,
+    .sell-form select {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .sell-form button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
