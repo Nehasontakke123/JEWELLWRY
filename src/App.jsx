@@ -13,13 +13,11 @@ import DynamicCategory from "./components/DynamicCategory";
 import BridesOfIndia from "./components/BridesOfIndia";
 import BrideDetails from "./components/BrideDetails";
 import LoginForm from "./components/LoginForm copy";
-// import LoginPage from './pages/LoginPage';
+
 import Catalog from "./components/Catalog";
 
 import CartPage from "./pages/CartPage";
-// import UploadReel from './components/UploadReel';
-// import ReelFeed from './components/ReelFeed';
-// import RecordReel from './components/RecordReel';
+
 
 
 
@@ -42,22 +40,14 @@ function App() {
           <Route path="/brides-of-india" element={<BridesOfIndia />} />
           <Route path="/bride/:id" element={<BrideDetails />} />
           <Route path="/login/profile" element={<LoginForm />} /> 
-          {/* <Route path="/login/profile" element={<LoginPage />} /> */}
-
-          {/* { <Route path="/login" element={<LoginPage />} /> */}
-          {/* <Route path="/profile" element={<ProfilePage />} /> */}
+         
 
           <Route path="/catalog" element={<Catalog />} />
-          {/* <Route path="/product/:id" element={<SingleProduct />} /> */}
-          {/* <Route path="/catalog/:category" element={<CatalogPage />} /> */}
+          
 
           <Route path="/cart" element={<CartPage />} />
         </Routes>
-        {/* <UploadReel /> */}
-
-        {/* <RecordReel /> */}
-
-      {/* <ReelFeed /> */}
+       
        
         <Footer />
       </>
