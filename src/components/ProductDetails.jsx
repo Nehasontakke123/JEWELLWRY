@@ -46,7 +46,7 @@ const ProductDetails = () => {
     try {
       // Step 1: Create Order
       const { data: order } = await axios.post(
-        "https://projectnewbackend1-1.onrender.com/api/payment/create-order",
+        "https://projectnewbackend1-1.onrender.com/api/payment/createOrder",
         {
           amount: product.price, // Use the product's price
         }
