@@ -37,3 +37,5 @@ export default defineConfig({
     global: 'window', // ✅ Define global as window
   },
 });
+
+
