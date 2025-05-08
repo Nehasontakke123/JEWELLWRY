@@ -21,23 +21,19 @@
 // vite.config.js
 
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react()],
-  base: './', // ✅ Required for correct relative path resolution on Vercel
-
+  plugins: [], // Removed the @vitejs/plugin-react plugin
   server: {
-    host: true,
-    port: 5173,
-    strictPort: true,
+    host: true, // ✅ Allows access from network
+    port: 5173, // ✅ Ensures correct port usage
+    strictPort: true, // ✅ Prevents automatic port switching
     hmr: {
-      protocol: 'ws',
-      clientPort: 5173,
+      protocol: 'ws', // ✅ WebSocket protocol fix
+      clientPort: 5173, // ✅ Ensures WebSocket works on the correct port
     },
   },
   define: {
-    global: 'window',
+    global: 'window', // ✅ Define global as window
   },
 });
-
