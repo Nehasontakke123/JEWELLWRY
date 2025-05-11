@@ -1,98 +1,48 @@
+/* General Container */
 .diamond-jewellery-container {
   padding: 40px;
   text-align: center;
-  /* background: linear-gradient(135deg, #8e4457, #f9e0e6); Elegant plum-pink gradient */
-  border-radius: 20px;
+  background: #fff; /* White background for simplicity */
 }
 
+/* Heading */
 .heading {
   font-size: 40px;
   font-weight: 800;
-  color: #8e4457;
-  margin-bottom: -5px;
-  font-family: 'Georgia', serif;
-  position: relative;
-  display: inline-block;
+  color: #8e4457; /* Plum-pink color */
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-family: 'Georgia', serif;
 }
 
-.heading ::after {
-  content: "";
-  position: absolute;
-  width: 60%;
-  height: 4px;
-  background: #8e4457;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-
+/* Description */
 .description {
   font-size: 1.4rem;
   margin-bottom: 50px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  font-style:normal;
+  font-style: normal;
   color: black;
 }
 
-
-
-
-
-
-/* .heading {
-  font-size: 40px;
-  font-weight: 800;
-  color: #8e4457;
-  margin-bottom: 10px;
-  font-family: 'Georgia', serif;
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.heading::after {
-  content: "";
-  position: absolute;
-  width: 50%;  
-  height: 3px; 
-  background: #8e4457;
-  bottom: -5px;  
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px;
-} */
-
-
-/* .jewellery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-} */
-
+/* Jewellery Grid */
 .jewellery-grid {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 0 20px; /* padding added to avoid overflow */
+  gap: 30px; /* Spacing between cards */
+  padding: 0 20px; /* Padding to avoid overflow */
   box-sizing: border-box;
 }
 
-
+/* Jewellery Card */
 .jewellery-card {
   background: #fff;
   padding: 25px;
-  margin-left: 55px;
-  border-radius: 30px;
-  width: 300px;
-  height: 360px; 
+  border-radius: 20px; /* Rounded corners */
+  width: 200px; /* Card width */
+  height: 260px; /* Reduced card height */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
@@ -108,17 +58,21 @@
 .jewellery-card:hover {
   transform: translateY(-10px) rotate(5deg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(145deg, #8e4457, #d07c95); 
+  background: linear-gradient(145deg, #8e4457, #d07c95); /* Hover gradient */
 }
 
+/* Circle Image Wrapper */
 .circle-image-wrapper {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
   border: 5px solid #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Added flexbox for better alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .jewellery-card:hover .circle-image-wrapper {
@@ -126,10 +80,11 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Jewellery Image */
 .jewellery-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
   transition: transform 0.3s ease;
 }
 
@@ -137,12 +92,13 @@
   transform: scale(1.1);
 }
 
+/* Label */
 .label {
   display: block;
   margin-top: 20px;
   font-weight: 700;
-  font-size: 1.4rem;
-  color: #8e4457;
+  font-size: 1.2rem;
+  color: #8e4457; /* Plum-pink color */
   transition: color 0.3s ease;
   text-align: center;
 }
@@ -151,77 +107,47 @@
   color: #fff;
 }
 
-/* Medium Devices */
+/* Responsive Design */
+
+/* Medium Devices (Tablets) */
 @media (max-width: 768px) {
   .jewellery-card {
-    width: 240px;
-    height: 360px;
+    width: 180px;
+    height: 240px; /* Reduced height for medium devices */
   }
 
   .circle-image-wrapper {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
   }
 
   .label {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
-/* Small Devices */
-/* @media (max-width: 480px) {
-  .jewellery-grid {
-    gap: 20px;
-  }
-
-  .jewellery-card {
-    width: 100%;
-    height: 350px;
-    padding: 20px;
-  }
-
-  .circle-image-wrapper {
-    width: 160px;
-    height: 160px;
-  }
-
-  .label {
-    font-size: 1.1rem;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .description {
-    font-size: 0.95rem;
-  }
-} */
-
-
-
-
+/* Small Devices (Phones) */
 @media (max-width: 480px) {
   .jewellery-grid {
-    gap: 20px;
-    padding: 0 10px; /* reduce padding on small devices */
+    gap: 20px; /* Reduced gap */
+    padding: 0 10px; /* Reduced padding */
   }
 
   .jewellery-card {
     width: 100%;
-    max-width: 300px; /* limit max width */
-    margin: 0 auto;   /* center the card */
-    height: 350px;
+    max-width: 250px; /* Limit max width */
+    margin: 0 auto; /* Center the card */
+    height: 220px; /* Reduced height for small devices */
     padding: 20px;
   }
 
   .circle-image-wrapper {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
   }
 
   .label {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .heading {

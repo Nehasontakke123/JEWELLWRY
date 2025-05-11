@@ -13,11 +13,8 @@ const VideoStream = () => {
     const [isCalling, setIsCalling] = useState(false);
     const [incomingCall, setIncomingCall] = useState(false);
     const [incomingOffer, setIncomingOffer] = useState(null);
-    // const [phoneNumber, setPhoneNumber] = useState("");
     const [videoCallLink, setVideoCallLink] = useState("");
-
     const [phoneNumber, setPhoneNumber] = useState("+919359481880"); // or get from input
-
 
     useEffect(() => {
         // Handle incoming offer
@@ -60,8 +57,18 @@ const VideoStream = () => {
         };
 
         peerConnection.current.ontrack = (event) => {
-            remoteVideoRef.current.srcObject = event.streams[0];
-        };
+    if (remoteVideoRef.current) {
+        let remoteStream = remoteVideoRef.current.srcObject;
+        if (!remoteStream) {
+            remoteStream = new MediaStream();
+            remoteVideoRef.current.srcObject = remoteStream;
+        }
+        if (!remoteStream.getTracks().find(t => t.id === event.track.id)) {
+            remoteStream.addTrack(event.track);
+        }
+    }
+};
+
     };
 
     const acceptCall = async () => {
@@ -101,7 +108,7 @@ const VideoStream = () => {
             socket.emit("offer", offer);
             setIsCalling(true);
 
-            // Send call link
+            // Send call link via WhatsApp
             await sendSMSWithVideoLink();
         } catch (error) {
             console.error("❌ Error starting call:", error);
@@ -112,25 +119,28 @@ const VideoStream = () => {
         const regex = /^\+?[1-9]\d{1,14}$/;  // Basic validation for international phone numbers
         return regex.test(number);
     };
+const sendSMSWithVideoLink = async () => {
+    const videoUrl = "https://us05web.zoom.us/j/84223349123?pwd=IKmZfbMtmJuQsSofbm78f8xi1pzJ1z.1"; // Zoom link
 
+    if (!isValidPhoneNumber(phoneNumber)) {
+        alert("❌ Please enter a valid phone number!");
+        return;
+    }
 
-    const sendSMSWithVideoLink = async () => {
-      const phoneNumber = "9359481880"; // WITHOUT +91, backend handles it
-      const videoUrl = "https://us05web.zoom.us/j/84223349123?pwd=IKmZfbMtmJuQsSofbm78f8xi1pzJ1z.1";
-    
-      try {
-        const response = await axios.post("https://projectnewbackend1-1.onrender.com/api/video/send-whatsapp", {
-          to: phoneNumber,
-          messageBody: "🚨 Your video call is ready! Click the link below to join:",
-          videoUrl: videoUrl
+    try {
+        const response = await axios.post("https://projectnewbackend1-1.onrender.com/api/video/send-sms", {
+            to: phoneNumber, // Make sure it's in +91 format
+            messageBody: `🚨 Your video call is ready! Click here to join:\n${videoUrl}`,
         });
-    
-        console.log("✅ WhatsApp response:", response.data);
-      } catch (error) {
-        console.error("❌ Error sending WhatsApp message:", error);
-      }
-    };
-    
+
+        console.log("✅ SMS response:", response.data);
+        setVideoCallLink(videoUrl);
+        alert("✅ SMS sent successfully!");
+    } catch (error) {
+        console.error("❌ Error sending SMS:", error);
+        alert("❌ Failed to send SMS!");
+    }
+};
 
 
     const endCall = () => {
@@ -152,12 +162,11 @@ const VideoStream = () => {
                 <div>
                     <label>Enter Phone Number to Send Call Link:</label>
                     <input
-  type="text"
-  value={phoneNumber}
-  onChange={(e) => setPhoneNumber(e.target.value)}
-  placeholder="Enter phone number"
-/>
-
+                        type="text"
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        placeholder="Enter phone number"
+                    />
                 </div>
             )}
 

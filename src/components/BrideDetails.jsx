@@ -205,7 +205,7 @@ Jo dil ne kaha haan maine suna....`
     //   videoUrl: "https://www.youtube.com/embed/fENiGoK-vi0",
       music: Music3,
       lyrics:
-`Meri tarah tum bhee kabhi pyaar kar ke dekho naa
+     `Meri tarah tum bhee kabhi pyaar kar ke dekho naa
       Hmm, meri tarah tum bhee kabhi pyaar kar ke dekho naa
       Chaahat ka mujse, sanam, iqaraar kar ke dekho naa
       Kithna mazaa hai, kaisa nasha hai

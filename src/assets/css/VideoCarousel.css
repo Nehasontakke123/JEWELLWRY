@@ -1,183 +1,172 @@
-   .video-carousel-wrapper {
-    padding: 4rem 1rem;
-    background: #f9f9f9;
-    position: relative;
-  }
-  
-  .video-swiper {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
+.video-carousel-wrapper {
+  padding: 4rem 1rem;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.video-swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px; /* Remove this if using breakpoints */
+  max-width: 90vw;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
   .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease;
+    width: 85%; /* Reduce width for tablets */
+    height: 350px; /* Reduce height */
   }
-  
-  .swiper-slide.swiper-slide-active .carousel-card {
-    transform: scale(1.1);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    z-index: 2;
-  }
-  
-  .carousel-card {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #000;
-  }
-  
-  .carousel-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
-  }
-  
-  .carousel-video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 20px;
-    background: #000;
-  }
-  
+
   .carousel-caption {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 0.7rem 1rem;
-    border-radius: 12px;
-    color: #fff;
-    font-size: 1rem;
-    text-align: center;
-    font-weight: 500;
+    font-size: 0.9rem;
   }
-  
-  /* Video stats */
-  .video-stats {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
-    opacity: 0.85;
+}
+
+@media screen and (max-width: 480px) {
+  .swiper-slide {
+    width: 95%; /* Reduce width for phones */
+    height: 280px; /* Further reduce height */
   }
-  
-  .video-title {
-    font-weight: 600;
-    font-size: 1rem;
+
+  .carousel-caption {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.7rem;
   }
-  
-  /* Reactions Floating Animation */
-  .reactions-float {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none;
+}
+
+.carousel-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #000;
+}
+
+.carousel-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+}
+
+.carousel-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #000;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Video stats */
+.video-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  opacity: 0.85;
+}
+
+.video-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Reactions Floating Animation */
+.reactions-float {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.float-emoji {
+  position: absolute;
+  animation: floatUp 2s ease-in-out forwards;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .float-emoji {
-    position: absolute;
-    animation: floatUp 2s ease-in-out forwards;
-    font-size: 1.5rem;
+  100% {
+    transform: translateY(-150px);
     opacity: 0;
   }
-  
-  @keyframes floatUp {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-150px);
-      opacity: 0;
-    }
-  }
-  
-  /* Fireworks effect */
-  .fireworks {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2.5rem;
-    animation: fireworksAnimation 1s ease-in-out infinite alternate;
-    pointer-events: none;
-  }
-  
-  @keyframes fireworksAnimation {
-    0% {
-      transform: translateX(-50%) scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(-50%) scale(1.2);
-      opacity: 0.8;
-    }
-  }
-  
-  /* Reaction Buttons */
-  .reaction-buttons {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-  }
-  
-  .reaction-buttons button {
-    background:white;
-    border: none;
-    padding: 0.7rem 1rem;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    color: #fff;
-  }
-  
-  .reaction-buttons button:hover {
-    background:white;
-  }
-  
-  /* Responsive */
-  @media screen and (max-width: 768px) {
-    .swiper-slide {
-      width: 85%;
-      height: 350px;
-    }
-  
-    .carousel-caption {
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .swiper-slide {
-      width: 95%;
-      height: 280px;
-    }
-  
-    .carousel-caption {
-      font-size: 0.8rem;
-      padding: 0.5rem 0.7rem;
-    }
-  }
-  
+}
 
+/* Fireworks effect */
+.fireworks {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  animation: fireworksAnimation 1s ease-in-out infinite alternate;
+  pointer-events: none;
+}
 
+@keyframes fireworksAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.8;
+  }
+}
 
+/* Reaction Buttons */
+.reaction-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
 
+.reaction-buttons button {
+  background: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: #fff;
+}
 
- 
+.reaction-buttons button:hover {
+  background: white;
+}

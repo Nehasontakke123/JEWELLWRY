@@ -20,81 +20,60 @@
   cursor: pointer;
 }
 
-
-
-/* ✅ Top Navigation Bar */
+/* ✅ Top Navigation Bar (Reduced Height) */
 .nav-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 8px 20px;
   max-width: 1300px;
   margin: auto;
+  flex-wrap: wrap;
 }
 
+/* ✅ Logo */
 .nav-logo a {
-  font-size: 49px;
-  font-weight: 800;
-  color: #8e4457;
+  font-size: 24px;
+  font-weight: bold;
+  color: #8b3c50;
   text-decoration: none;
+  padding-right: 20px;
 }
 
-/* ✅ Search Bar */
-/* .nav-search {
-  display: flex;
-  align-items: center;
-  border: 1px solid #c08497;
-  border-radius: 20px;
-  padding: 5px 15px;
-  width: 50%;
-  font-size: 30px;
-  background: linear-gradient(270deg, #fff, #f9e1e1, #ffdde1);
-  background-size: 200% 200%;
-  animation: waveGradient 6s ease infinite;
-}
-
-.nav-search input {
-  border: none;
-  outline: none;
-  flex: 1;
-  font-size: 21px;
-  color: #b56576;
-  background: transparent;
-} */
-
-
+/* ✅ Search Bar - Gradient Match & Smaller */
 .nav-search {
   display: flex;
   align-items: center;
-  border: 1px solid #c08497;
-  border-radius: 20px;
-  padding: 8px 8px; /* ✂️ padding अजून कमी केली */
-  width: 50%;
-  font-size: 21px; /* ✂️ font-size अजून कमी */
-  /* background: linear-gradient(270deg, #fff, #f9e1e1, #ffdde1); */
-  background-size: 200% 200%;
+  border: 1px solid #ffb6b9;
+  border-radius: 25px;
+  padding: 2px 10px;
+  max-width: 450px;
+  background: linear-gradient(270deg, #ffb6b9, #fae3d9, #ffcad4, #fbe3e8);
+  background-size: 400% 400%;
   animation: waveGradient 6s ease infinite;
-  height: 35px; /* ✅ fixed height देली */
+  flex: 1;
+  margin: 6px;
 }
 
 .nav-search input {
+  flex: 1;
   border: none;
   outline: none;
-  flex: 1;
-  font-size: 21px; /* ✂️ input font-size अजून कमी */
-  margin-top: 20px;
-  color: #b56576;
+  padding: 5px;
+  font-size: 13px;
   background: transparent;
-  height: 100%; /* ✅ full height input ला */
+  color: #8e4457;
+  text-align: center; /* Centers the placeholder text */
+  max-width: 100%; /* Ensures the input doesn't exceed the container */
+  display: flex;
+  justify-content: center;
+
 }
-
-
-
-
+/* ✅ Icons (Search & Mic) */
 .search-icon, .mic-icon {
-  margin-left: 10px;
+  color: #8e4457;
+  margin-left: 6px;
   cursor: pointer;
-  color: #c08497;
   transition: all 0.3s ease-in-out;
 }
 
@@ -102,49 +81,91 @@
   color: #b56576;
 }
 
-/* ✅ Icons */
+/* ✅ Icons Wrapper */
 .nav-icons {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
   color: #8e4457;
-  font-size: 25px;
+  font-size: 18px;
+}
+
+.nav-icons svg {
+  transition: all 0.2s ease-in-out;
+  font-size: 18px;
 }
 
 .nav-icons svg:hover {
+  color: #b56576;
+  transform: scale(1.1);
+}
+
+/* ✅ Cart */
+.cart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-link {
   color: #8e4457;
-  transform: scale(1.2);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cart-link:hover {
+  color: #6e3244;
+}
+
+.cart-icon {
+  font-size: 22px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: #8e4457;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 2px 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  line-height: 1;
 }
 
 /* ✅ Bottom Navigation Links */
 .nav-links {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 12px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 6px 0;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 15px;
+  animation: waveGradient 6s ease infinite;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #8e4457;
-  padding: 5px 15px;
-  transition: all 0.3s ease-in-out;
+  padding: 4px 8px;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-links a:hover {
   color: #b56576;
   background: linear-gradient(to right, #fff5f7, #b56576);
-  border-radius: 5px;
-  padding: 5px 15px;
+  border-radius: 4px;
 }
 
-/* ✅ Active Link */
 .nav-links a.active {
   color: white;
-  background: #b56576;
-  border-radius: 5px;
-  padding: 5px 15px;
+  background-color: #c08497;
+  border-radius: 4px;
+  padding: 4px 8px;
 }
 
 /* ✅ Mobile Menu Button */
@@ -157,7 +178,16 @@
   color: #b56576;
 }
 
- /* ✅ Responsive Design */
+/* ✅ Login Form */
+.loginform a {
+  color: #8e4457;
+}
+
+.loginform a.active {
+  color: #8e4457;
+}
+
+/* ✅ Responsive Design */
 @media screen and (max-width: 768px) {
   .nav-top {
     flex-direction: column;
@@ -166,11 +196,12 @@
 
   .nav-search {
     width: 90%;
-    margin-top: 10px;
+    max-width: none;
+    margin-top: 8px;
   }
 
   .nav-icons {
-    margin-top: 10px;
+    margin-top: 8px;
     justify-content: center;
     gap: 15px;
   }
@@ -178,7 +209,7 @@
   .nav-toggle {
     display: block;
     position: absolute;
-    top: 15px;
+    top: 10px;
     right: 20px;
   }
 
@@ -201,59 +232,16 @@
 
 @media screen and (max-width: 480px) {
   .nav-logo a {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .nav-icons svg {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .cart-icon {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
-.loginform a{
-  color: #8e4457;
-}
-
-.loginform a.active {
-  color:#8e4457;  
-} 
 
 
-
-
-
-.cart-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.cart-link {
-  color: #8e4457;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.cart-link:hover {
-  color: #6e3244; /* Darker shade on hover */
-}
-
-.cart-icon {
-  font-size: 24px;
-}
-
-.cart-count {
-  position: absolute;
-  top: -6px;
-  right: -10px;
-  background-color: #8e4457;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 999px;
-  padding: 2px 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  line-height: 1;
-}

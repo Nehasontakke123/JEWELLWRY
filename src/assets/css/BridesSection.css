@@ -16,7 +16,6 @@
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
-
 }
 
 .brides-heading h1::after {
@@ -29,29 +28,25 @@
   left: 50%;
   transform: translateX(-50%);
   border-radius: 2px;
-  
 }
 
 .brides-heading p {
-  /* font-size: 1.3rem;
-  color: #000;
-  margin-top: 10px;
-  margin-bottom: 30px; */
   font-size: 1.4rem;
   margin-bottom: 50px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  font-style:normal;
+  font-style: normal;
   color: black;
 }
 
+/* Banner Section */
 .banner {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1200px; /* Reduced maximum width */
   margin: 0 auto;
   transition: transform 0.4s ease-in-out;
 }
@@ -63,12 +58,13 @@
 .banner-img {
   width: 100%;
   height: auto;
-  max-height: 850px;
+  max-height: 600px; /* Reduced maximum height */
   display: block;
   border-radius: 12px;
   object-fit: cover;
 }
 
+/* Brides Categories */
 .brides-list {
   margin-top: -280px;
   padding: 20px 16px 0;
@@ -88,7 +84,6 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease;
-  /* background: #fff; */
 }
 
 .bride-card:hover {
@@ -122,7 +117,7 @@
   }
 
   .banner-img {
-    max-height: 650px;
+    max-height: 500px; /* Further reduced height for tablets */
   }
 
   .brides-list {
@@ -144,7 +139,7 @@
   }
 
   .banner-img {
-    max-height: 500px;
+    max-height: 400px; /* Further reduced height for phones */
   }
 
   .brides-list {
@@ -176,22 +171,21 @@
   }
 
   .banner-img {
-    max-height: 300px;
+    max-height: 300px; /* Further reduced height for very small screens */
   }
 
   .brides-list {
-    /* Set to one horizontal row with scrolling if needed */
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 12px;
     padding: 10px 12px;
     justify-content: flex-start;
-    margin-top: -80px; /* कमी करण्यासाठी */
+    margin-top: -80px;
   }
 
   .bride-card {
     flex: 0 0 auto;
-    width: 100px; /* लहान कार्ड्स */
+    width: 100px; /* Smaller cards */
     margin-bottom: 0;
   }
 

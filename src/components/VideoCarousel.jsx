@@ -50,22 +50,39 @@ const VideoCarousel = () => {
   return (
     <div className="video-carousel-wrapper">
       <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        loop={true}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ clickable: true }}
-        modules={[EffectCoverflow, Pagination]}
-        className="video-swiper"
-        ref={swiperRef}
-      >
+  effect={"coverflow"}
+  grabCursor={true}
+  centeredSlides={true}
+  loop={true}
+  coverflowEffect={{
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+  }}
+  pagination={{ clickable: true }}
+  modules={[EffectCoverflow, Pagination]}
+  className="video-swiper"
+  ref={swiperRef}
+  breakpoints={{
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    480: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: "auto",
+    },
+  }}
+>
+
         {videoList.map((video, index) => (
           <SwiperSlide key={index}>
             <div className="carousel-card" onClick={() => handleSlideClick(index)}>
@@ -113,6 +130,3 @@ const VideoCarousel = () => {
 };
 
 export default VideoCarousel;
-
-
-
