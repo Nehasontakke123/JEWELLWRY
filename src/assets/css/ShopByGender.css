@@ -126,14 +126,14 @@
     }
 }
 
-/* Small Devices (Phones) */
+/* Small Devices (Phones) *//* Small Devices (Phones) */
 @media (max-width: 768px) {
     .section-title {
         font-size: 24px;
     }
 
     .tabs {
-        gap: 10px; /* Maintain spacing */
+        gap: 10px;
     }
 
     .tab {
@@ -142,18 +142,24 @@
     }
 
     .jewellery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Smaller cards */
-        gap: 10px; /* Reduced gap */
+        grid-template-columns: repeat(3, 1fr); /* Force 3 columns on small screens */
+        gap: 10px;
     }
 
     .jewellery-item {
-        max-width: 200px;
+        max-width: 100%; /* Let it fit the grid column */
+        padding: 10px;
     }
 
     .jewellery-img {
-        height: 200px;
+        height: 140px;
+    }
+
+    .jewellery-text {
+        font-size: 14px;
     }
 }
+
 
 /* Extra Small Devices (Very Small Screens) */
 @media (max-width: 480px) {
