@@ -1,5 +1,3 @@
-// src/components/Catalog.js
-
 import React, { useState } from "react";
 // import '../assets/css/Catalog.css'
 import CategoryProducts from "../components/CategoryProducts";
