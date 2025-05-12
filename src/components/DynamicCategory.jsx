@@ -152,7 +152,7 @@ const DynamicCategory = () => {
 
   return (
     <div className="dynamic-category-wrapper">
-    <h2 className="category-title">{name} Collection</h2>
+    {/* <h2 className="category-title">{name} Collection</h2> */}
     <div className="dynamic-product-grid">
       {items.map(item => (
         <div className="dynamic-flip-card" key={item.id}>
