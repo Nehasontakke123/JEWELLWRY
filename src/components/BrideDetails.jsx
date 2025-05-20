@@ -1,18 +1,18 @@
 import React from 'react'; 
 import { useParams } from "react-router-dom";
 import FloatingFlowers from "./FloatingFlowers";
-import BrideMusicPlayer from "./BrideMusicPlayer"; // 🎶 New Component
+import BrideMusicPlayer from "./BrideMusicPlayer"; // 🎶 Music New Component
 import "../assets/css/BrideDetails.css";
 
 
 import MainImg1 from "../assets/images/ReteshWedding.jpg";
-import MainImg2 from "../assets/images/NewImg4.jpg";
+import MainImg2 from "../assets/images/Deep.jpg";
 import MainImg3 from "../assets/images/Preeneti.jpg";
 import MainImg4 from "../assets/images/NewImg2.jpg";
 import MainImg5 from "../assets/images/NewImg3.jpg";
 import MainImg6 from "../assets/images/SidKiara.jpg";
-import MainImg7 from "../assets/images/AliaRanbirMarriage.jpg";
-import MainImg8 from '../assets/images/Katrina Kaif Vicky Kaushal.jpg'
+import MainImg7 from "../assets/images/alia.jpg";
+import MainImg8 from '../assets/images/veeky.jpg'
 
 
 import Music1 from "../assets/music/pal pal soch mein aana na   tujhe meri kasam (1).mp3";
