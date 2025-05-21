@@ -49,14 +49,14 @@
     
   }
   
-  .brides-showcase-img {
+  /* .brides-showcase-img {
     width: 100%;
     height: 400px;
     max-width: 100%;
     border-radius: 16px;
     object-fit: cover;
     transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
+  } */
   
   .brides-showcase-card:hover .brides-showcase-img {
     filter: brightness(1.1);
@@ -113,38 +113,48 @@
     color: #8e4457;
   }
   
-  /* Responsive text & image adjustments */
-  @media (max-width: 768px) {
-    .brides-showcase-title {
-      font-size: 26px;
-    }
-  
-    .brides-showcase-description,
-    .brides-showcase-full-description {
-      font-size: 14px;
-    }
-  
-    .brides-showcase-img {
-      height: 300px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .brides-showcase-title {
-      font-size: 22px;
-    }
-  
-    .brides-showcase-description,
-    .brides-showcase-full-description {
-      font-size: 13px;
-    }
-  
-    .brides-showcase-img {
-      height: 240px;
-    }
-  }
-  
+  .brides-showcase-img {
+  width: 100%;
+  height: auto; /* Change from fixed height to auto */
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  aspect-ratio: 3 / 4; /* Maintain image aspect ratio properly */
+  transition: filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .brides-showcase-title {
+    font-size: 26px;
+  }
+
+  .brides-showcase-description,
+  .brides-showcase-full-description {
+    font-size: 14px;
+  }
+
+  .brides-showcase-img {
+    aspect-ratio: 3 / 4;
+    height: auto; /* Ensure no cutting */
+  }
+}
+
+@media (max-width: 480px) {
+  .brides-showcase-title {
+    font-size: 22px;
+  }
+
+  .brides-showcase-description,
+  .brides-showcase-full-description {
+    font-size: 13px;
+  }
+
+  .brides-showcase-img {
+    aspect-ratio: 3 / 4;
+    height: auto; /* Remove fixed height to avoid image crop */
+  }
+}
 
 
 

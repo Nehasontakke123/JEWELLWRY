@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  margin-top: 120px;
+  margin-top: 60px;
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -15,20 +15,22 @@
 .bride-image {
   width: 100%;
   max-width: 500px;
-  height: auto;
-  object-fit: cover;
+  height: auto; /* auto ठेवून aspect ratio maintain करा */
+  object-fit: contain; /* full image दाखवेल, कट होणार नाही */
   border-radius: 16px;
   transition: all 0.4s ease;
   border: 4px solid #8e4457;
   box-shadow: 0 8px 25px #8e4457;
   display: block;
   margin: 0 auto 30px;
+  background-color: #fff; /* optional: जर background पाहिजे तर */
 }
 
 .bride-image:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 35px #8e4457;
 }
+
 
 /* ========== Text Section ========== */
 .bride-text {
@@ -72,10 +74,10 @@
 .bride-lyrics {
   width: 100%;
   max-width: 700px;
-  padding: 30px 40px;
+  padding: 30px 30px;
   font-size: 1.4rem;
   text-align: left;
-  margin: 30px auto 50px; /* Added 50px bottom margin for spacing */
+  margin: 30px auto 50px;
   background: #fef7f8;
   border-radius: 16px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);

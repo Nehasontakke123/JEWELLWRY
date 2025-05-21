@@ -1,19 +1,17 @@
-import React from 'react'; 
+import React from "react";
 import { useParams } from "react-router-dom";
 import FloatingFlowers from "./FloatingFlowers";
 import BrideMusicPlayer from "./BrideMusicPlayer"; // 🎶 Music New Component
 import "../assets/css/BrideDetails.css";
 
-
 import MainImg1 from "../assets/images/ReteshWedding.jpg";
 import MainImg2 from "../assets/images/Deep.jpg";
-import MainImg3 from "../assets/images/Preeneti.jpg";
+import MainImg3 from "../assets/images/Parineeti_img.jpg";
 import MainImg4 from "../assets/images/NewImg2.jpg";
 import MainImg5 from "../assets/images/NewImg3.jpg";
 import MainImg6 from "../assets/images/SidKiara.jpg";
-import MainImg7 from "../assets/images/alia.jpg";
-import MainImg8 from '../assets/images/veeky.jpg'
-
+import MainImg7 from "../assets/images/image10.jpg";
+import MainImg8 from "../assets/images/veeky.jpg";
 
 import Music1 from "../assets/music/pal pal soch mein aana na   tujhe meri kasam (1).mp3";
 import Music2 from "../assets/music/Kyaa Dil Ne Kahaa Title Song (Lyrical Video)  Tusshar Kapoor  Esha  Udit Narayan  Alka Yagnik.mp3";
@@ -24,19 +22,16 @@ import Music6 from "../assets/music/Moh Moh Ke Dhaage  Full Song  Dum Laga Ke Ha
 import Music7 from "../assets/music/Suno Na Sangemarmar Full Song Youngistaan  Arijit Singh  Jackky Bhagnani, Neha Sharma.mp3";
 import Music8 from "../assets/music/Kesariya - Brahmāstra  Ranbir Kapoor  Alia Bhatt  Pritam  Arijit Singh  Amitabh Bhattacharya4K.mp3";
 
-
-
-
 const brides = [
-    {
-      id: 1,
+  {
+    id: 1,
     //   name: "Traditional Bride",
-      image: MainImg1,
+    image: MainImg1,
     //   details: "She shines like a jewel, adorned in exquisite gold and diamond jewelry, reflecting elegance and prosperity.",
     // videoUrl: "https://www.youtube.com/embed/nxH-x_OjGvQ",
 
-      music: Music1,
-      lyrics: `Pal Pal Soch Mein Aa Na Na
+    music: Music1,
+    lyrics: `Pal Pal Soch Mein Aa Na Na
 
 Huclhul Dil Mein Machana Na
 
@@ -110,16 +105,16 @@ Dhere Dhere Saapno Mein Aa Na Na
 
 Tujhe Meri Kasam
 
-Tujhe Meri Kasam`
-    },
-    {
-      id: 2,
+Tujhe Meri Kasam`,
+  },
+  {
+    id: 2,
     //   name: "Modern Diva",
-      image: MainImg2,
+    image: MainImg2,
     //   details: "She steals the spotlight with her beauty, confidence, and modern bridal fashion.",
     //   videoUrl: "https://www.youtube.com/embed/XCvRgM8fziw",
-      music: Music2,
-      lyrics: `La la la la la la la,
+    music: Music2,
+    lyrics: `La la la la la la la,
 la la la la la la..
 La la la la la la la,
 la la la la la la..
@@ -195,17 +190,16 @@ Hum hi nahin hamaare
 Oh yaara
 Kya dil ne kaha, kya tumne suna
 
-Jo dil ne kaha haan maine suna....`
-    },
-    {
-      id: 3,
+Jo dil ne kaha haan maine suna....`,
+  },
+  {
+    id: 3,
     //   name: "Floral Dream",
-      image: MainImg5,
+    image: MainImg5,
     //   details: "Her charm is mesmerizing, with intricate embroidery and floral designs symbolizing romance and grace.",
     //   videoUrl: "https://www.youtube.com/embed/fENiGoK-vi0",
-      music: Music3,
-      lyrics:
-     `Meri tarah tum bhee kabhi pyaar kar ke dekho naa
+    music: Music3,
+    lyrics: `Meri tarah tum bhee kabhi pyaar kar ke dekho naa
       Hmm, meri tarah tum bhee kabhi pyaar kar ke dekho naa
       Chaahat ka mujse, sanam, iqaraar kar ke dekho naa
       Kithna mazaa hai, kaisa nasha hai
@@ -232,20 +226,16 @@ Jo dil ne kaha haan maine suna....`
       Chaahat ka mujse, sanam, iqaraar kar ke dekho naa
       Kithna mazaa hai, kaisa nasha hai
       Kithna mazaa hai, kaisa nasha hai
-      Pyaar kar ke dekho naa`
-
-
-
-
-    },
-    {
-      id: 4,
+      Pyaar kar ke dekho naa`,
+  },
+  {
+    id: 4,
     //   name: "Fusion Queen",
-      image: MainImg8,
+    image: MainImg8,
     //   details: "She sets new fashion trends by blending traditional and contemporary styles, making a bold statement.",
     //   videoUrl: "https://www.youtube.com/embed/bp2aThDTL2I",
-      music: Music4,
-      lyrics: `… Chanda chhup jaane laga
+    music: Music4,
+    lyrics: `… Chanda chhup jaane laga
 Taare sharmane lage
 Gori ka mukhda dekho
 Ambar jhuk jaane laga
@@ -286,17 +276,16 @@ Meri subah-o-shaam ki
 … Mere piya bhi kehne lage hain
 Main na rahi kisi kaam ki
 Laal chunariya odh li tune
-Jab se piya ke naam ki`
-    },
-    {
-      id: 5,
+Jab se piya ke naam ki`,
+  },
+  {
+    id: 5,
     //   name: "Royal Sparkle",
-      image: MainImg7,
+    image: MainImg7,
     //   details: "She dazzles in her elegance, often adorned with Swarovski embellishments and royal lehengas.",
     //   videoUrl: "https://www.youtube.com/embed/JdjFI9ASbBg",
-      music: Music5,
-      lyrics:  
-      `Main ta tere naal hi rehna ji
+    music: Music5,
+    lyrics: `Main ta tere naal hi rehna ji
       Har gham sang tere sehna ji
       
       Main ta tere naal hi rehna ji
@@ -350,16 +339,16 @@ Jab se piya ke naam ki`
       Jo jag se kaha na jaaye woh
       Mujhko bas tujhse kehna ji
       Jo jag se kaha na jaaye
-      Bas tujhse kehna ji…`
-    },
-    {
-      id: 6,
+      Bas tujhse kehna ji…`,
+  },
+  {
+    id: 6,
     //   name: "Queenly Saree Bride",
-      image: MainImg6,
+    image: MainImg6,
     //   details: "She carries herself like a queen, wearing royal silk sarees and heirloom jewelry.",
     //   videoUrl: "https://www.youtube.com/embed/R35thns4IAw",
-      music: Music6,
-      lyrics: `Moh moh
+    music: Music6,
+    lyrics: `Moh moh
 Moh moh ke dhaage
 Ye moh-moh ke dhaage teri ungliyon se ja uljhe
 Ye moh-moh ke dhaage teri ungliyon se ja uljhe
@@ -383,16 +372,16 @@ Ke aisa beparwaah man pehle to naa tha
 Khaali raahen ham aankh munde jaaen
 Pahuchen kaheen to bewajah
 Ye moh-moh ke dhaage teri ungliyon se ja uljhe
-Koyi toh-toh naa laage kis tarah girah ye sulajhe`
-    },
-    {
-      id: 7,
+Koyi toh-toh naa laage kis tarah girah ye sulajhe`,
+  },
+  {
+    id: 7,
     //   name: "Classic Beauty",
-      image: MainImg3,
+    image: MainImg3,
     //   details: "Grace and elegance define her, as she opts for classic designs with timeless appeal.",
     //   videoUrl: "https://www.youtube.com/embed/p-gdhnGmhZU",
-      music: Music7,
-      lyrics: ` Suno na sangemarmar ki yeh minaare
+    music: Music7,
+    lyrics: ` Suno na sangemarmar ki yeh minaare
 
 Kuch bhi nahi hai aage tumhaare
 
@@ -442,16 +431,16 @@ Aaj se dil pe mere raaj tumhara
 Taj tumhara..
 
 Suno na sangemarmar ki yeh minaare
-`
-    },
-    {
-      id: 8,
+`,
+  },
+  {
+    id: 8,
     //   name: "Maharashtrian Bride",
-      image: MainImg4,
+    image: MainImg4,
     //   details: "She wears a traditional Nauvari saree, a Nath (nose ring), and green bangles, symbolizing prosperity and marital bliss.",
     //   videoUrl: "https://www.youtube.com/embed/e14qfHSiXik",
-      music: Music8,
-      lyrics: `Mujhko itna bataaye koyi
+    music: Music8,
+    lyrics: `Mujhko itna bataaye koyi
 Kaise tujh se dil na lagaaye koyi
 Rabba ne tujhko banaane mein
 Kar di hain husn ki khali tijoriyaan
@@ -485,27 +474,25 @@ Kesariya tera ishq hai, piya, ishq hai, piya
 Kesariya tera ishq hai, piya, ishq hai, piya
 Piya, ishq hai, piya, ishq hai, piya
 Kesariya tera ishq hai, piya
-Rang jaaun jo main haath lagaaun`
-    }
-  ];
-  
+Rang jaaun jo main haath lagaaun`,
+  },
+];
 
-  const BrideDetails = () => {
-    const { id } = useParams();
-    const brideId = parseInt(id);
-    const bride = brides.find((b) => b.id === brideId);
-  
-    if (!bride) {
-      return <div>No bride found!</div>;
-    }
+const BrideDetails = () => {
+  const { id } = useParams();
+  const brideId = parseInt(id);
+  const bride = brides.find((b) => b.id === brideId);
 
-  
+  if (!bride) {
+    return <div>No bride found!</div>;
+  }
+
   return (
     <div className="bride-content">
       {bride.music && <BrideMusicPlayer music={bride.music} />}
       <img src={bride.image} alt={bride.name} className="bride-image" />
-      
-       <div className="bride-text">
+
+      <div className="bride-text">
         {/* <h2>Bride Name: {bride?.name || "Not Available"}</h2>
         <p><strong>Details:</strong> {bride?.details || "No details provided"}</p> */}
 
@@ -527,9 +514,9 @@ Rang jaaun jo main haath lagaaun`
           </div>
         )}
       </div>
-  
+
       {/* YouTube Video Embed */}
-      <div className="bride-video">
+      {/* <div className="bride-video">
         <iframe
           width="560"
           height="315"
@@ -538,17 +525,12 @@ Rang jaaun jo main haath lagaaun`
           frameBorder="0"
           allowFullScreen
         ></iframe>
-      </div>
-  
+      </div> */}
+
       <FloatingFlowers />
       {/* <BridalQuote /> */}
     </div>
   );
-}  
+};
 
-export default BrideDetails
-
-
-
-
-
+export default BrideDetails;
